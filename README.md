@@ -119,14 +119,14 @@ Edit `src/data/publications.json`. It is an array of sections, each with a
 as a `doi.org` link; set it to `null` if there is none. The homepage shows the first
 four entries of the "Journals" section.
 
-## Update the CV
+## CV
 
-1. Drop the new PDF in `public/wp-content/uploads/<year>/<month>/`.
-   Keeping older CVs in place means old links keep resolving.
-2. Point `cv.url` in `src/data/about.json` at it and update `cv.updated`.
-
-The CV link on the homepage, the About page and the footer all read from that one
-field.
+The CV was removed from the site on purpose: no links on any page, and the old
+PDF files under `public/wp-content/uploads/` were deleted. To bring it back, put
+the PDF under `public/`, add a `cv` object (`url`, `label`, `updated`) to
+`src/data/about.json`, and add an entry for it to `PROFILES` in `src/consts.ts`.
+Note that `npm run import` regenerates `about.json` and re-downloads the old CV
+PDFs from WordPress, so re-apply the removal after running it.
 
 ## Re-run the WordPress import
 

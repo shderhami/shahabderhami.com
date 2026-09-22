@@ -8,7 +8,10 @@ const isCurrent = (href: string) =>
 
 <header class="site-header">
   <div class="shell site-header__inner">
-    <a class="site-header__name" href="/">{SITE.title}</a>
+    <a class="site-header__brand" href="/">
+      <span class="site-header__name">{SITE.title}</span>
+      <span class="site-header__tagline">{SITE.tagline}</span>
+    </a>
 
     <nav class="site-nav" aria-label="Main">
       {

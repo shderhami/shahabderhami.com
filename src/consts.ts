@@ -2,6 +2,7 @@ import about from './data/about.json';
 
 export const SITE = {
   title: 'Shahab Derhami',
+  tagline: 'A weblog for sharing research findings, thoughts, and more.',
   role: 'Assistant Professor of Business Analytics and Operations',
   affiliation: 'School of Management, Binghamton University',
   affiliationUrl: 'https://www.binghamton.edu/som/',
@@ -25,7 +26,6 @@ export const NAV = [
 ] as const;
 
 export const PROFILES = [
-  { href: about.cv?.url ?? '#', label: 'CV (PDF)', short: 'CV' },
   { href: about.scholar ?? '#', label: 'Google Scholar', short: 'Scholar' },
   { href: about.social?.linkedin ?? '#', label: 'LinkedIn', short: 'LinkedIn' },
   { href: about.social?.twitter ?? '#', label: 'Twitter / X', short: 'Twitter' },
