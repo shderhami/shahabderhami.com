@@ -1,0 +1,22 @@
+{
+  "bioHTML": "I am an Assistant Professor of Business Analytics and Operations at the <a href=\"https://www.binghamton.edu/som/\">School of Management</a> at <a href=\"https://www.binghamton.edu/\">Binghamton University</a>. My research mainly focuses on business analytics in supply chain management. It involves developing data-driven descriptive analytics (i.e. statistical analysis), predictive analytics (i.e. simulation modeling and machine learning), and prescriptive analytics (i.e. optimization) to solve strategic, tactical, and operational level problems in supply chain and retail distribution systems.",
+  "bioText": "I am an Assistant Professor of Business Analytics and Operations at the School of Management at Binghamton University. My research mainly focuses on business analytics in supply chain management. It involves developing data-driven descriptive analytics (i.e. statistical analysis), predictive analytics (i.e. simulation modeling and machine learning), and prescriptive analytics (i.e. optimization) to solve strategic, tactical, and operational level problems in supply chain and retail distribution systems.",
+  "headshot": {
+    "src": "/wp-content/uploads/2017/10/shahab-website.jpg",
+    "alt": "Shahab Derhami",
+    "width": 600,
+    "height": 478
+  },
+  "cv": {
+    "url": "/wp-content/uploads/2021/01/CV-Shahab-Derhami-Jan2021.pdf",
+    "label": "Curriculum Vitae",
+    "updated": "01/22/2021"
+  },
+  "scholar": "https://scholar.google.com/citations?user=b5i2mxoAAAAJ&hl=en",
+  "title": "About me",
+  "updated": "2021-01-22T14:10:42",
+  "social": {
+    "twitter": "https://twitter.com/ShahabDerhami",
+    "linkedin": "http://www.linkedin.com/in/shahabderhami"
+  }
+}

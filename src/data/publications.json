@@ -1,0 +1,102 @@
+[
+  {
+    "section": "Journals",
+    "items": [
+      {
+        "title": "Estimation of potential lost sales in retail networks of high-value substitutable products",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/24725854.2021.1969484",
+        "authors": "S. Derhami, & B. Montreuil",
+        "venue": "IISE Transactions",
+        "details": "",
+        "doi": "10.1080/24725854.2021.1969484",
+        "year": 2021
+      },
+      {
+        "title": "Assessing product availability in omnichannel retail networks in the presence of on-demand inventory transshipment and product substitution",
+        "url": "https://doi.org/10.1016/j.omega.2020.102315",
+        "authors": "S. Derhami, B. Montreuil, & G. Bau",
+        "venue": "Omega",
+        "details": "102, 102315, 2021",
+        "doi": "10.1016/j.omega.2020.102315",
+        "year": 2021
+      },
+      {
+        "title": "A simulation-based optimization approach to design optimal layouts for block stacking warehouses",
+        "url": "https://doi.org/10.1016/j.ijpe.2019.107525",
+        "authors": "S. Derhami, J. S. Smith, & K. R. Gue",
+        "venue": "International Journal of Production Economics",
+        "details": "223, 107525, 2019",
+        "doi": "10.1016/j.ijpe.2019.107525",
+        "year": 2019
+      },
+      {
+        "title": "Space-efficient layouts for block stacking warehouses",
+        "url": "http://dx.doi.org/10.1080/24725854.2018.1539280",
+        "authors": "S. Derhami, J. S. Smith, & K. R. Gue",
+        "venue": "IISE Transactions",
+        "details": "51(9), 957-971, 2019",
+        "doi": "10.1080/24725854.2018.1539280",
+        "year": 2019
+      },
+      {
+        "title": "An integer programming approach for fuzzy rule-based classification systems",
+        "url": "http://dx.doi.org/10.1016/j.ejor.2016.06.065",
+        "authors": "S. Derhami, & A. E. Smith",
+        "venue": "European Journal of Operational Research",
+        "details": "256 (3), 924-934, 2017",
+        "doi": "10.1016/j.ejor.2016.06.065",
+        "year": 2017
+      },
+      {
+        "title": "Optimising space utilisation in block stacking warehouses",
+        "url": "http://dx.doi.org/10.1080/00207543.2016.1154216",
+        "authors": "S. Derhami, J. S. Smith, & K. R. Gue",
+        "venue": "International Journal of Production Research",
+        "details": "55 (21), 6436-6452, 2017",
+        "doi": "10.1080/00207543.2016.1154216",
+        "year": 2017
+      },
+      {
+        "title": "A technical note on the paper “hGA: Hybrid genetic algorithm in fuzzy rule-based classification systems for high-dimensional problems”",
+        "url": "http://dx.doi.org/10.1016/j.asoc.2015.10.016",
+        "authors": "S. Derhami, & A. E. Smith",
+        "venue": "Applied Soft Computing",
+        "details": "41, 91-93, 2016",
+        "doi": "10.1016/j.asoc.2015.10.016",
+        "year": 2016
+      }
+    ]
+  },
+  {
+    "section": "Refereed conference proceedings",
+    "items": [
+      {
+        "title": "Urban parcel logistics hub and network design: The impact of modularity and hyperconnectivity",
+        "url": "https://digitalcommons.georgiasouthern.edu/cgi/viewcontent.cgi?article=1026&context=pmhr_2018",
+        "authors": "B. Montreuil, S. Buckley, L. Faugere, R. Khir, & S. Derhami",
+        "venue": "Progress in Material Handling Research",
+        "details": "2018",
+        "doi": null,
+        "year": 2018
+      },
+      {
+        "title": "A simulation model to evaluate the layout for block stacking warehouses",
+        "url": "http://www.mhi.org/downloads/learning/cicmhe/colloquium/2016/08-Derhami_Smith_Gue_paper.pdf",
+        "authors": "S. Derhami, J. S. Smith, & K. R. Gue",
+        "venue": "Progress in Material Handling Research",
+        "details": "2016",
+        "doi": null,
+        "year": 2016
+      },
+      {
+        "title": "Iterative mixed integer programming model for fuzzy rule-based classification systems",
+        "url": "http://dx.doi.org/10.1109/FUZZ-IEEE.2014.6891822",
+        "authors": "S. Derhami, & A. E. Smith",
+        "venue": "IEEE International Conference on Fuzzy Systems (FUZZ-IEEE)",
+        "details": "2079-2084, 2014",
+        "doi": "10.1109/FUZZ-IEEE.2014.6891822",
+        "year": 2014
+      }
+    ]
+  }
+]

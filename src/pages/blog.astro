@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+import PostListItem from '../components/PostListItem.astro';
+import { getSortedPosts, groupByYear } from '../lib/posts';
+import taxonomies from '../data/taxonomies.json';
+
+const posts = await getSortedPosts();
+const byYear = groupByYear(posts);
+
+const description =
+  'Notes on research in business analytics for supply chain management: warehouse design, ' +
+  'retail distribution networks, simulation, optimization and machine learning.';
+---
+
+<Base title="Blog" description={description} path="/blog/">
+  <header class="page-head">
+    <p class="kicker">Writing</p>
+    <h1>Blog</h1>
+    <p class="page-head__lede">{description}</p>
+    <ul class="tag-list blog-cats">
+      {
+        taxonomies.categories.map((c) => (
+          <li>
+            <a class="tag" href={`/category/${c.slug}/`}>
+              {c.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </header>
+
+  {
+    byYear.map(([year, yearPosts]) => (
+      <section>
+        <h2 class="year-heading">{year}</h2>
+        <ul class="post-list">
+          {yearPosts.map((post) => (
+            <PostListItem post={post} headingLevel="h3" />
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</Base>
+
+<style>
+  .blog-cats {
+    margin-top: 1.25rem;
+  }
+</style>

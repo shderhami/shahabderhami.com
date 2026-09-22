@@ -1,0 +1,34 @@
+---
+import { formatDate, isoDate } from '../consts';
+
+interface Props {
+  post: {
+    data: {
+      title: string;
+      date: Date;
+      description: string;
+      category: { slug: string; name: string };
+      permalink: string;
+    };
+  };
+  headingLevel?: 'h2' | 'h3';
+}
+
+const { post, headingLevel = 'h2' } = Astro.props;
+const { title, date, description, category, permalink } = post.data;
+const Heading = headingLevel;
+---
+
+<li>
+  <article>
+    <p class="post-meta">
+      <time datetime={isoDate(date)}>{formatDate(date)}</time>
+      <span class="post-meta__sep" aria-hidden="true">·</span>
+      <a href={`/category/${category.slug}/`}>{category.name}</a>
+    </p>
+    <Heading class="post-item__title">
+      <a href={permalink}>{title}</a>
+    </Heading>
+    {description && <p class="post-item__desc">{description}</p>}
+  </article>
+</li>

@@ -1,0 +1,94 @@
+{
+  "categories": [
+    {
+      "slug": "personal-life",
+      "name": "Personal life"
+    },
+    {
+      "slug": "research",
+      "name": "Research"
+    }
+  ],
+  "tags": [
+    {
+      "slug": "wareagle",
+      "name": "#WarEagle"
+    },
+    {
+      "slug": "auburnuniversity",
+      "name": "AuburnUniversity"
+    },
+    {
+      "slug": "block-stacking",
+      "name": "Block stacking"
+    },
+    {
+      "slug": "cross-aisles",
+      "name": "Cross-aisles"
+    },
+    {
+      "slug": "customer-substitution",
+      "name": "customer substitution"
+    },
+    {
+      "slug": "demand-estimation",
+      "name": "demand estimation"
+    },
+    {
+      "slug": "inventory-management",
+      "name": "inventory management"
+    },
+    {
+      "slug": "inventory-transshipment",
+      "name": "inventory transshipment"
+    },
+    {
+      "slug": "lane-depth",
+      "name": "Lane depth"
+    },
+    {
+      "slug": "lost-sales",
+      "name": "lost sales"
+    },
+    {
+      "slug": "material-handling-cost",
+      "name": "Material handling cost"
+    },
+    {
+      "slug": "palletized-warehouse",
+      "name": "Palletized warehouse"
+    },
+    {
+      "slug": "phddefense",
+      "name": "PhDdefense"
+    },
+    {
+      "slug": "product-availability",
+      "name": "product availability"
+    },
+    {
+      "slug": "product-demand",
+      "name": "product demand"
+    },
+    {
+      "slug": "space-utilization",
+      "name": "Space utilization"
+    },
+    {
+      "slug": "stockout-based-substitution",
+      "name": "stockout-based substitution"
+    },
+    {
+      "slug": "vehicle-dealerships",
+      "name": "vehicle dealerships"
+    },
+    {
+      "slug": "warehouse-design",
+      "name": "Warehouse design"
+    },
+    {
+      "slug": "warehouse-layout",
+      "name": "Warehouse layout"
+    }
+  ]
+}

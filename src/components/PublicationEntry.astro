@@ -1,0 +1,129 @@
+---
+interface Props {
+  item: {
+    title: string | null;
+    url: string | null;
+    authors: string;
+    venue: string;
+    details: string;
+    doi: string | null;
+    year: number | null;
+  };
+}
+
+const { item } = Astro.props;
+
+// Highlight the site owner in the author list, the way the original page did.
+const authorParts = item.authors.split(/(S\. Derhami)/g).filter(Boolean);
+---
+
+<li class="publication">
+  <p class="publication__title">
+    {
+      item.url ? (
+        <a href={item.url} target="_blank" rel="noopener">
+          {item.title}
+        </a>
+      ) : (
+        item.title
+      )
+    }
+  </p>
+
+  <p class="publication__authors">
+    {
+      authorParts.map((part) =>
+        part === 'S. Derhami' ? <strong>{part}</strong> : <span>{part}</span>
+      )
+    }
+  </p>
+
+  <p class="publication__venue">
+    {item.venue && <em>{item.venue}</em>}
+    {item.venue && item.details && <span>, </span>}
+    {item.details && <span>{item.details}</span>}
+    {
+      item.doi && (
+        <>
+          <span class="publication__sep" aria-hidden="true"> · </span>
+          <a
+            class="publication__doi"
+            href={`https://doi.org/${item.doi}`}
+            target="_blank"
+            rel="noopener"
+          >
+            doi:{item.doi}
+          </a>
+        </>
+      )
+    }
+  </p>
+</li>
+
+<style>
+  .publication {
+    padding-left: 2.25rem;
+    position: relative;
+  }
+
+  .publication + .publication {
+    margin-top: 1.6rem;
+  }
+
+  .publication::before {
+    content: counter(list-item);
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    width: 1.5rem;
+    text-align: right;
+    font-size: 0.82rem;
+    font-weight: 650;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-muted);
+  }
+
+  .publication__title {
+    font-family: var(--font-display);
+    font-size: 1.08rem;
+    font-weight: 560;
+    line-height: 1.35;
+    margin: 0 0 0.3rem;
+    text-wrap: pretty;
+  }
+
+  .publication__title a {
+    color: var(--text);
+    text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  }
+
+  .publication__title a:hover {
+    color: var(--accent);
+  }
+
+  .publication__authors {
+    margin: 0;
+    font-size: 0.94rem;
+    color: var(--text-muted);
+  }
+
+  .publication__authors strong {
+    color: var(--text);
+    font-weight: 650;
+  }
+
+  .publication__venue {
+    margin: 0.1rem 0 0;
+    font-size: 0.94rem;
+    color: var(--text-muted);
+  }
+
+  .publication__sep {
+    color: var(--border-strong);
+  }
+
+  .publication__doi {
+    font-size: 0.86rem;
+    word-break: break-word;
+  }
+</style>

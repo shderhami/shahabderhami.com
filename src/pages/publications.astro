@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+import PublicationEntry from '../components/PublicationEntry.astro';
+import publications from '../data/publications.json';
+import about from '../data/about.json';
+
+const total = publications.reduce((n, s) => n + s.items.length, 0);
+const description =
+  `Peer-reviewed journal articles and refereed conference proceedings by Shahab Derhami ` +
+  `on warehouse design, retail distribution networks, simulation, optimization and machine learning.`;
+---
+
+<Base title="Publications" description={description} path="/publications/">
+  <header class="page-head">
+    <p class="kicker">Research output</p>
+    <h1>Publications</h1>
+    <p class="page-head__lede">
+      {total} peer-reviewed works. Links go to the publisher's page or DOI record.
+      The full list is in the{' '}
+      {about.cv?.url ? <a href={about.cv.url} target="_blank" rel="noopener">CV</a> : 'CV'},
+      and citations are tracked on{' '}
+      {about.scholar ? <a href={about.scholar} target="_blank" rel="noopener">Google Scholar</a> : 'Google Scholar'}.
+    </p>
+  </header>
+
+  {
+    publications.map((section) => (
+      <section class="pub-section">
+        <h2 class="pub-section__title">{section.section}</h2>
+        <ol class="publication-list">
+          {section.items.map((item) => (
+            <PublicationEntry item={item} />
+          ))}
+        </ol>
+      </section>
+    ))
+  }
+</Base>
+
+<style>
+  .pub-section + .pub-section {
+    margin-top: clamp(2.75rem, 6vw, 3.75rem);
+  }
+
+  .pub-section__title {
+    font-size: 1.3rem;
+    margin: 0 0 1.5rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--border);
+  }
+</style>

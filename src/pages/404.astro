@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import { NAV } from '../consts';
+---
+
+<Base
+  title="Page not found"
+  description="That page does not exist on shahabderhami.com."
+  path="/404/"
+>
+  <div class="notfound">
+    <p class="kicker">Error 404</p>
+    <h1>Page not found</h1>
+    <p class="page-head__lede">
+      The page you asked for is not here. It may have moved, or the link may be
+      mistyped.
+    </p>
+
+    <ul class="link-row">
+      <li><a class="button button--accent" href="/">Home</a></li>
+      {
+        NAV.map((item) => (
+          <li>
+            <a class="button" href={item.href}>
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Base>
+
+<style>
+  .notfound {
+    padding-block: clamp(1rem, 6vw, 3rem);
+  }
+
+  .notfound .link-row {
+    margin-top: 2rem;
+  }
+</style>

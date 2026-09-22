@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SD">
+  <style>
+    .bg { fill: #0a6a5e; }
+    .fg { fill: #fbfaf7; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #5fcfbb; }
+      .fg { fill: #131417; }
+    }
+  </style>
+  <rect class="bg" width="64" height="64" rx="14" />
+  <text
+    class="fg"
+    x="32"
+    y="33"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="30"
+    font-weight="600"
+    letter-spacing="-1"
+  >SD</text>
+</svg>

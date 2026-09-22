@@ -1,0 +1,41 @@
+---
+import Base from '../../layouts/Base.astro';
+import PostListItem from '../../components/PostListItem.astro';
+import { getSortedPosts, type Post } from '../../lib/posts';
+import taxonomies from '../../data/taxonomies.json';
+
+export async function getStaticPaths() {
+  const posts = await getSortedPosts();
+
+  return taxonomies.tags.map((tag) => ({
+    params: { slug: tag.slug },
+    props: {
+      tag,
+      posts: posts.filter((p) => p.data.tags.some((t) => t.slug === tag.slug)),
+    },
+  }));
+}
+
+interface Props {
+  tag: { slug: string; name: string };
+  posts: Post[];
+}
+
+const { tag, posts } = Astro.props;
+const count = posts.length;
+const description = `Posts tagged ${tag.name} on shahabderhami.com.`;
+---
+
+<Base title={`Tag: ${tag.name}`} description={description} path={`/tag/${tag.slug}/`}>
+  <header class="page-head">
+    <p class="kicker">Tag</p>
+    <h1>{tag.name}</h1>
+    <p class="page-head__lede">
+      {count} {count === 1 ? 'post' : 'posts'} · <a href="/blog/">all posts</a>
+    </p>
+  </header>
+
+  <ul class="post-list">
+    {posts.map((post) => <PostListItem post={post} />)}
+  </ul>
+</Base>

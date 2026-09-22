@@ -1,0 +1,28 @@
+---
+import { SITE, PROFILES } from '../consts';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="shell site-footer__inner">
+    <p style="margin:0">© {year} {SITE.title}</p>
+
+    <ul class="site-footer__links">
+      {
+        PROFILES.map((p) => (
+          <li>
+            <a
+              href={p.href}
+              rel={p.href.startsWith('/') ? undefined : 'me noopener'}
+              target={p.href.startsWith('/') ? undefined : '_blank'}
+            >
+              {p.short}
+            </a>
+          </li>
+        ))
+      }
+      <li><a href="/rss.xml">RSS</a></li>
+    </ul>
+  </div>
+</footer>
