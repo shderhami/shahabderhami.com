@@ -8,10 +8,10 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'always',
   // The post list is the home page; the old WordPress /blog/ page redirects to it.
-  // The old WordPress RSS address forwards to the new feed.
+  // (The old /feed/ address is forwarded by the static file public/feed/index.html,
+  // because a redirect here would gain a trailing slash and point at /rss.xml/.)
   redirects: {
     '/blog/': '/',
-    '/feed/': '/rss.xml',
   },
   build: {
     format: 'directory',
@@ -19,8 +19,7 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
-      filter: (page) =>
-        !page.includes('/404') && !page.endsWith('/blog/') && !page.endsWith('/feed/'),
+      filter: (page) => !page.includes('/404') && !page.endsWith('/blog/'),
     }),
   ],
   markdown: {
