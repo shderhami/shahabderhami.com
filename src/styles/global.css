@@ -787,6 +787,12 @@ main {
   margin-top: 0;
 }
 
+/* Consecutive year groups: the heading's own top margin is removed when it
+   is the first child of its section, so the gap lives on the section. */
+section:has(> .year-heading) + section:has(> .year-heading) {
+  margin-top: 3.25rem;
+}
+
 /* ------------------------------------------------- publication lists --- */
 
 .publication-list {
