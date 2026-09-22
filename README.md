@@ -116,8 +116,7 @@ Edit `src/data/publications.json`. It is an array of sections, each with a
 ```
 
 `S. Derhami` is bolded automatically wherever it appears in `authors`. `doi` renders
-as a `doi.org` link; set it to `null` if there is none. The homepage shows the first
-four entries of the "Journals" section.
+as a `doi.org` link; set it to `null` if there is none.
 
 ## CV
 

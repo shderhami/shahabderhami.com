@@ -20,7 +20,7 @@ export const SITE = {
 } as const;
 
 export const NAV = [
-  { href: '/blog/', label: 'Blog' },
+  { href: '/', label: 'Blog' },
   { href: '/publications/', label: 'Publications' },
   { href: '/about/', label: 'About' },
 ] as const;
