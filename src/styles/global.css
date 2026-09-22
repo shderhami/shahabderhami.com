@@ -23,8 +23,10 @@
   --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas,
     'Liberation Mono', monospace;
 
-  /* measure: ~68 characters at the base body size */
-  --measure: 34rem;
+  /* measure: ~80 characters at the base body size */
+  --measure: 42rem;
+  /* tallest a content image may render; keeps photos and charts in proportion */
+  --figure-max-height: 26rem;
   --content: 44rem;
   --wide: 54rem;
   --gutter: clamp(1.15rem, 5vw, 2.5rem);
@@ -574,13 +576,23 @@ main {
   margin-inline: auto;
 }
 
-/* Let stand-alone figures breathe past the measure on wide screens. */
-@media (min-width: 62rem) {
-  .prose > figure {
-    width: var(--wide);
-    max-width: none;
-    margin-left: calc(50% - var(--wide) / 2);
-  }
+/* Figures stay inside the reading column and are capped in height so a
+   large photo or chart never dominates the page. Aspect ratio is preserved
+   because every image carries width/height attributes. */
+.prose figure {
+  max-width: var(--measure);
+}
+
+.prose figure img:not(.equation-img):not(.equation-inline),
+.prose > p > img:not(.equation-img):not(.equation-inline) {
+  width: auto;
+  max-height: var(--figure-max-height);
+  margin-inline: auto;
+}
+
+.prose figure.gallery img {
+  max-height: none;
+  width: 100%;
 }
 
 /* galleries ------------------------------------------------------------- */
